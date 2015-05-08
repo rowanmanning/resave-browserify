@@ -1,0 +1,39 @@
+{
+    "name": "resave-browserify",
+    "version": "0.1.0",
+
+    "description": "A Browserify bundling and saving middleware, built with Resave",
+    "keywords": [ "browserify", "middleware", "resave" ],
+    "author": "Rowan Manning (http://rowanmanning.com/)",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/resave-browserify.git"
+    },
+    "homepage": "https://github.com/rowanmanning/resave-browserify",
+    "bugs": "https://github.com/rowanmanning/resave-browserify/issues",
+    "license": "MIT",
+
+    "engines": {
+        "node": ">=0.10"
+    },
+    "dependencies": {
+        "browserify": "^10",
+        "node.extend": "~1.1",
+        "resave": "~0.1"
+    },
+    "devDependencies": {
+        "connect": "~3.3",
+        "jshint": "~2.7",
+        "mocha": "~2.2",
+        "mockery": "~1.4",
+        "proclaim": "~3.2",
+        "serve-static": "~1.9",
+        "sinon": "~1.14"
+    },
+
+    "main": "./lib/resave-browserify.js",
+    "scripts": {
+        "test": "make ci"
+    }
+}
