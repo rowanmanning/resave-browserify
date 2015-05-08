@@ -1,6 +1,7 @@
 'use strict';
 
 var connect = require('connect');
+var fs = require('fs');
 var resaveBrowserify = require('../..');
 var serveStatic = require('serve-static');
 

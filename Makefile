@@ -15,7 +15,7 @@ deps:
 # Lint JavaScript
 lint:
 	@echo "$(C_CYAN)> linting javascript$(C_RESET)"
-	@./node_modules/.bin/jshint . --exclude node_modules --config .jshintrc
+	@./node_modules/.bin/jshint . --exclude "{node_modules,example/basic/public}" --config .jshintrc
 
 # Run all tests
 test: test-unit

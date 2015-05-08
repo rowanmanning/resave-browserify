@@ -1,3 +1,4 @@
+/* global alert */
 'use strict';
 
 module.exports = saySomething;
