@@ -45,7 +45,11 @@ describe('lib/resave-browserify', function () {
         });
 
         it('should have a `debug` property', function () {
-            assert.isTrue(defaults.debug);
+            if (process.env.NODE_ENV === 'production') {
+                assert.isFalse(defaults.debug);
+            } else {
+                assert.isTrue(defaults.debug);
+            }
         });
 
     });
