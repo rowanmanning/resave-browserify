@@ -105,7 +105,23 @@ The directory to look for bundle files in. Defaults to `process.cwd()`.
 
 #### `browserify` (object)
 
-A configuration object which will get passed into Browserify. See the [Browserify options documentation][browserify-opts] for more information. Defaults to `{debug: true}`.
+A configuration object which will get passed into Browserify. See the [Browserify options documentation][browserify-opts] for more information.
+
+If `NODE_ENV` is `'production'`, it defaults to:
+
+```js
+{
+    debug: false
+}
+```
+
+If `NODE_ENV` is *not* `'production'`, it defaults to:
+
+```js
+{
+    debug: true
+}
+```
 
 #### `bundles` (object)
 
