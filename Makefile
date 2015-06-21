@@ -4,8 +4,8 @@ C_CYAN=\x1b[34;01m
 C_RESET=\x1b[0m
 
 # Group targets
-all: deps lint test
-ci: lint test
+all: deps lint jscs test
+ci: lint jscs test
 
 # Install dependencies
 deps:
@@ -15,7 +15,12 @@ deps:
 # Lint JavaScript
 lint:
 	@echo "$(C_CYAN)> linting javascript$(C_RESET)"
-	@./node_modules/.bin/jshint . --exclude "{node_modules,example/basic/public}" --config .jshintrc
+	@./node_modules/.bin/jshint . --config .jshintrc
+
+# Run JavaScript Code Style
+jscs:
+	@echo "$(C_CYAN)> checking javascript code style$(C_RESET)"
+	@./node_modules/.bin/jscs . --config .jscsrc
 
 # Run all tests
 test: test-unit

@@ -1,5 +1,5 @@
-/* jshint maxstatements: false, maxlen: false */
-/* global beforeEach, describe, it */
+// jshint maxstatements: false
+// jscs:disable disallowMultipleVarDecl, maximumLineLength
 'use strict';
 
 var assert = require('proclaim');
@@ -47,7 +47,8 @@ describe('lib/resave-browserify', function () {
         it('should have a `debug` property', function () {
             if (process.env.NODE_ENV === 'production') {
                 assert.isFalse(defaults.debug);
-            } else {
+            }
+            else {
                 assert.isTrue(defaults.debug);
             }
         });
