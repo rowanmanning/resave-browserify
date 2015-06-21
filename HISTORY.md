@@ -1,6 +1,11 @@
 
 # History
 
+## 0.2.2 pre-release (2015-06-21)
+
+  * Update dependencies
+  * Use JSCS to check for code-style issues
+
 ## 0.2.1 pre-release (2015-05-09)
 
   * Documentation improvements
