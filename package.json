@@ -1,6 +1,6 @@
 {
     "name": "resave-browserify",
-    "version": "0.2.2",
+    "version": "0.2.3",
 
     "description": "A middleware for compiling and saving Browserify bundles, built with Resave",
     "keywords": [ "browserify", "middleware", "resave" ],

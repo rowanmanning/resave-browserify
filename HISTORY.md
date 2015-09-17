@@ -1,6 +1,12 @@
 
 # History
 
+## 0.2.3 pre-release (2015-09-17)
+
+  * Add Node.js 4.x support
+  * Add code coverage reporting
+  * Update dependencies
+
 ## 0.2.2 pre-release (2015-06-21)
 
   * Update dependencies
