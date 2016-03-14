@@ -12,11 +12,11 @@ A middleware for compiling and saving [Browserify][browserify] bundles. Use with
 [![MIT licensed][shield-license]][info-license]
 
 ```js
-var connect = require('connect');
-var resaveBrowserify = require('resave-browserify');
-var serveStatic = require('serve-static');
+const connect = require('connect');
+const resaveBrowserify = require('resave-browserify');
+const serveStatic = require('serve-static');
 
-var app = connect();
+const app = connect();
 
 app.use(serveStatic('./public'));
 app.use(resaveBrowserify({
@@ -57,15 +57,15 @@ Getting Started
 Require in Resave Browserify:
 
 ```js
-var resaveBrowserify = require('resave-browserify');
+const resaveBrowserify = require('resave-browserify');
 ```
 
 Use the created middleware in your application:
 
 ```js
-var connect = require('connect');
+const connect = require('connect');
 
-var app = connect();
+const app = connect();
 
 app.use(resaveBrowserify({
     bundles: {
@@ -79,10 +79,10 @@ In the example above, requests to `/main.js` will load the file `./source/main-b
 This isn't great in production environments as it can be quite slow. In these cases you can save the output to a file which will get served by another middleware:
 
 ```js
-var connect = require('connect');
-var serveStatic = require('serve-static');
+const connect = require('connect');
+const serveStatic = require('serve-static');
 
-var app = connect();
+const app = connect();
 
 app.use(serveStatic('./public'));
 

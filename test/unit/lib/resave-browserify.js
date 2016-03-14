@@ -2,14 +2,17 @@
 // jscs:disable disallowMultipleVarDecl, maximumLineLength
 'use strict';
 
-var assert = require('proclaim');
-var mockery = require('mockery');
-var sinon = require('sinon');
+const assert = require('proclaim');
+const mockery = require('mockery');
+const sinon = require('sinon');
 
-describe('lib/resave-browserify', function () {
-    var browserify, extend, resave, resaveBrowserify;
+describe('lib/resave-browserify', () => {
+    let browserify;
+    let extend;
+    let resave;
+    let resaveBrowserify;
 
-    beforeEach(function () {
+    beforeEach(() => {
 
         extend = sinon.stub();
         mockery.registerMock('node.extend', extend);
@@ -24,27 +27,27 @@ describe('lib/resave-browserify', function () {
 
     });
 
-    it('should create a resave middleware', function () {
+    it('should create a resave middleware', () => {
         assert.calledOnce(resave);
         assert.isFunction(resave.firstCall.args[0]);
     });
 
-    it('should export the resave middleware', function () {
+    it('should export the resave middleware', () => {
         assert.strictEqual(resaveBrowserify, resave.mockReturn);
     });
 
-    it('should have a `defaults` property', function () {
+    it('should have a `defaults` property', () => {
         assert.isObject(resaveBrowserify.defaults);
     });
 
-    describe('.defaults', function () {
-        var defaults;
+    describe('.defaults', () => {
+        let defaults;
 
-        beforeEach(function () {
+        beforeEach(() => {
             defaults = resaveBrowserify.defaults;
         });
 
-        it('should have a `debug` property', function () {
+        it('should have a `debug` property', () => {
             if (process.env.NODE_ENV === 'production') {
                 assert.isFalse(defaults.debug);
             }
@@ -55,10 +58,14 @@ describe('lib/resave-browserify', function () {
 
     });
 
-    describe('resave `creatBundle` function', function () {
-        var browserifyOptions, bundlePath, creatBundle, done, options;
+    describe('resave `creatBundle` function', () => {
+        let browserifyOptions;
+        let bundlePath;
+        let creatBundle;
+        let done;
+        let options;
 
-        beforeEach(function () {
+        beforeEach(() => {
             bundlePath = 'foo';
             options = {
                 browserify: {
@@ -74,7 +81,7 @@ describe('lib/resave-browserify', function () {
             creatBundle(bundlePath, options, done);
         });
 
-        it('should default the browserify options', function () {
+        it('should default the browserify options', () => {
             assert.calledOnce(extend);
             assert.isTrue(extend.firstCall.args[0]);
             assert.isObject(extend.firstCall.args[1]);
@@ -82,12 +89,12 @@ describe('lib/resave-browserify', function () {
             assert.strictEqual(extend.firstCall.args[3], options.browserify);
         });
 
-        it('should create a browserify bundle with the expected options', function () {
+        it('should create a browserify bundle with the expected options', () => {
             assert.calledOnce(browserify);
             assert.calledWith(browserify, bundlePath, browserifyOptions);
         });
 
-        it('should callback with the browserify bundle', function () {
+        it('should callback with the browserify bundle', () => {
             assert.calledOnce(browserify.mockReturn.bundle);
             assert.calledWith(browserify.mockReturn.bundle, done);
         });

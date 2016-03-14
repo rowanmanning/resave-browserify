@@ -1,8 +1,8 @@
 'use strict';
 
-var sinon = require('sinon');
+const sinon = require('sinon');
 
-var browserify = module.exports = sinon.stub();
+const browserify = module.exports = sinon.stub();
 browserify.mockReturn = {
     bundle: sinon.stub()
 };
