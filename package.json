@@ -1,41 +1,41 @@
 {
-    "name": "resave-browserify",
-    "version": "1.0.1",
-
-    "description": "A middleware for compiling and saving Browserify bundles, built with Resave",
-    "keywords": [ "browserify", "middleware", "resave" ],
-    "author": "Rowan Manning (http://rowanmanning.com/)",
-
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rowanmanning/resave-browserify.git"
-    },
-    "homepage": "https://github.com/rowanmanning/resave-browserify",
-    "bugs": "https://github.com/rowanmanning/resave-browserify/issues",
-    "license": "MIT",
-
-    "engines": {
-        "node": ">=4"
-    },
-    "dependencies": {
-        "browserify": "^13",
-        "node.extend": "~1.1",
-        "resave": "^1"
-    },
-    "devDependencies": {
-        "connect": "^3",
-        "istanbul": "~0.4",
-        "jscs": "^2",
-        "jshint": "^2",
-        "mocha": "^2",
-        "mockery": "^1",
-        "proclaim": "^3",
-        "serve-static": "^1",
-        "sinon": "^1"
-    },
-
-    "main": "./lib/resave-browserify.js",
-    "scripts": {
-        "test": "make ci"
-    }
+  "name": "resave-browserify",
+  "version": "1.0.1",
+  "description": "A middleware for compiling and saving Browserify bundles, built with Resave",
+  "keywords": [
+    "browserify",
+    "middleware",
+    "resave"
+  ],
+  "author": "Rowan Manning (http://rowanmanning.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanmanning/resave-browserify.git"
+  },
+  "homepage": "https://github.com/rowanmanning/resave-browserify",
+  "bugs": "https://github.com/rowanmanning/resave-browserify/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "browserify": "^13",
+    "node.extend": "~1.1",
+    "resave": "^1"
+  },
+  "devDependencies": {
+    "connect": "^3",
+    "istanbul": "~0.4",
+    "jscs": "^2",
+    "jshint": "^2",
+    "mocha": "^2",
+    "mockery": "^1",
+    "proclaim": "^3",
+    "serve-static": "^1",
+    "sinon": "^1"
+  },
+  "main": "./lib/resave-browserify.js",
+  "scripts": {
+    "test": "make ci"
+  }
 }
