@@ -19,7 +19,7 @@
     "node": ">=4"
   },
   "dependencies": {
-    "browserify": "^13",
+    "browserify": "^16",
     "node.extend": "~1.1",
     "resave": "^1"
   },
